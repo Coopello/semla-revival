@@ -4,7 +4,6 @@ import type { AppLoadContext } from "@remix-run/cloudflare";
 import { createRequestHandler } from "@remix-run/cloudflare";
 import * as build from "./build";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const handleRemixRequest = createRequestHandler(build, process.env.NODE_ENV);
 
