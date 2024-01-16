@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/cloudflare-workers";
 import app from "./server";
+import { showRoutes } from "hono/dev";
 
 const workersApp = new Hono();
 
@@ -12,6 +13,6 @@ workersApp.get(
 );
 
 workersApp.route("/", app);
-workersApp.showRoutes();
+showRoutes(workersApp);
 
 export default workersApp;
