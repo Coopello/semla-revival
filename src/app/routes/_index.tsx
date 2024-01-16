@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Button } from "src/components/ui/button";
+import { Button } from "src/components/ui/shadcn/button";
 
 export const meta: MetaFunction = () => {
   return [
