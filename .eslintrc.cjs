@@ -73,6 +73,10 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
       ],
+      rules: {
+        "@typescript-eslint/ban-ts-comment": "off",
+        "import/no-unresolved": "off",
+      },
     },
 
     // Node
