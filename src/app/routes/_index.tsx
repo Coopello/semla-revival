@@ -38,6 +38,7 @@ export default function Index() {
         </li>
       </ul>
       <Button>これはボタンでぢ。</Button>
+      <Button>これもボタンでぢ。</Button>
     </div>
   );
 }
