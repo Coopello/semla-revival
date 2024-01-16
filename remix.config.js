@@ -5,4 +5,10 @@ export default {
   // assetsBuildDirectory: "public/build",
   // publicPath: "/build/",
   // serverBuildPath: "build/index.js",
+  serverConditions: ["worker"],
+  serverDependenciesToBundle: "all",
+  serverMainFields: ["browser", "module", "main"],
+  serverMinify: true,
+  serverModuleFormat: "esm",
+  serverPlatform: "neutral",
 };
