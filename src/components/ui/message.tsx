@@ -3,18 +3,18 @@ import { FC } from "react";
 
 type MessageProps = {
   message: string;
-  type?: "bot" | "mine";
+  type?: "bot" | "me";
 };
 
 const messageContainerVariants = cva("flex", {
   variants: {
     type: {
       bot: "justify-start",
-      mine: "justify-end",
+      me: "justify-end",
     },
   },
   defaultVariants: {
-    type: "mine",
+    type: "me",
   },
 });
 
@@ -24,16 +24,16 @@ const messageVariants = cva(
     variants: {
       type: {
         bot: "bg-gray-800 rounded-bl-none",
-        mine: "bg-yellow-400 rounded-br-none",
+        me: "bg-yellow-400 rounded-br-none",
       },
     },
     defaultVariants: {
-      type: "mine",
+      type: "me",
     },
   }
 );
 
-export const Message: FC<MessageProps> = ({ message, type = "mine" }) => {
+export const Message: FC<MessageProps> = ({ message, type = "me" }) => {
   return (
     <div className={messageContainerVariants({ type })}>
       <p className={messageVariants({ type })}>{message}</p>
