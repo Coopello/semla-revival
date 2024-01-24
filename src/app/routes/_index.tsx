@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Message } from "src/components/ui/message";
 import { Button } from "src/components/ui/shadcn/button";
 
 export const meta: MetaFunction = () => {
@@ -39,6 +40,8 @@ export default function Index() {
       </ul>
       <Button>これはボタンでぢ。</Button>
       <Button>これもボタンでぢ。</Button>
+      <Message message="これはメッセージでぢ。" type="bot" />
+      <Message message="これはメッセージでぢ。" type="mine" />
     </div>
   );
 }
