@@ -8,7 +8,7 @@ type CardProps = {
 
 export const Card: FC<CardProps> = ({ title, content }) => {
   return (
-    <ShadcnCard className="p-4 w-80">
+    <ShadcnCard className="p-4 w-80 bg-primary text-white">
       <CardTitle className="text-lg mb-6">{title}</CardTitle>
       <CardContent className="p-0 line-clamp-5">{content}</CardContent>
     </ShadcnCard>
