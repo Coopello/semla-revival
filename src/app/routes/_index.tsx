@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { ChatForm } from "src/components/domain/chat/chatForm";
 import { Message } from "src/components/ui/message";
 import { Button } from "src/components/ui/shadcn/button";
 
@@ -41,7 +42,7 @@ export default function Index() {
       <Button>これはボタンでぢ。</Button>
       <Button>これもボタンでぢ。</Button>
       <Message message="これはメッセージでぢ。" type="bot" />
-      <Message message="これはメッセージでぢ。" type="mine" />
+      <ChatForm value="これはチャットフォームでぢ。" onChange={() => {}} />
     </div>
   );
 }
