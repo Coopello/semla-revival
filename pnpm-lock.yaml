@@ -32,6 +32,9 @@ dependencies:
   '@remix-run/serve':
     specifier: ^2.5.0
     version: 2.5.0(typescript@5.3.3)
+  '@tailwindcss/line-clamp':
+    specifier: ^0.4.4
+    version: 0.4.4(tailwindcss@3.4.1)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -87,7 +90,7 @@ devDependencies:
     version: 7.6.10(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
   '@storybook/preview-api':
     specifier: ^7.6.12
-    version: 7.6.12
+    version: 7.6.13
   '@storybook/react':
     specifier: ^7.6.10
     version: 7.6.10(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
@@ -4074,11 +4077,11 @@ packages:
       tiny-invariant: 1.3.1
     dev: true
 
-  /@storybook/channels@7.6.12:
-    resolution: {integrity: sha512-TaPl5Y3lOoVi5kTLgKNRX8xh2sUPekH0Id1l4Ymw+lpgriEY6r60bmkZLysLG1GhlskpQ/da2+S2ap2ht8P2TQ==}
+  /@storybook/channels@7.6.13:
+    resolution: {integrity: sha512-AiplFJXPjgHA62xqZFq7SwCS+o8bFrYLPM9I8yNY+8jhAi9N3Yig+h2P0jOXxLKicwrCXa5ZJ7PZK05M1r6YqA==}
     dependencies:
-      '@storybook/client-logger': 7.6.12
-      '@storybook/core-events': 7.6.12
+      '@storybook/client-logger': 7.6.13
+      '@storybook/core-events': 7.6.13
       '@storybook/global': 5.0.0
       qs: 6.11.0
       telejson: 7.2.0
@@ -4142,8 +4145,8 @@ packages:
       '@storybook/global': 5.0.0
     dev: true
 
-  /@storybook/client-logger@7.6.12:
-    resolution: {integrity: sha512-hiRv6dXsOttMPqm9SxEuFoAtDe9rs7TUS8XcO5rmJ9BgfwBJsYlHzAxXkazxmvlyZtKL7gMx6m8OYbCdZgUqtA==}
+  /@storybook/client-logger@7.6.13:
+    resolution: {integrity: sha512-uo51MsUG1Fbi1IA+me9tewF1mFiaYuyR0IMeBmaU3Z3CtjEUdOekmvRQ9ckoFn+BbKtxSipTodiR4HmIZDta3g==}
     dependencies:
       '@storybook/global': 5.0.0
     dev: true
@@ -4236,8 +4239,8 @@ packages:
       ts-dedent: 2.2.0
     dev: true
 
-  /@storybook/core-events@7.6.12:
-    resolution: {integrity: sha512-IO4cwk7bBCKH6lLnnIlHO9FwQXt/9CzLUAoZSY9msWsdPppCdKlw8ynJI5YarSNKDBUn8ArIfnRf0Mve0KQr9Q==}
+  /@storybook/core-events@7.6.13:
+    resolution: {integrity: sha512-hsL6JT273b1RcJBGHpNNLJ1ilzFMT4UCJwwtOpNNQVPBJt0Hn22vxC69/hpqSINrhHRLj3ak8CTtA0ynVjngaQ==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
@@ -4422,15 +4425,15 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/preview-api@7.6.12:
-    resolution: {integrity: sha512-uSzeMSLnCRROjiofJP0F0niLWL+sboQ5ktHW6BAYoPwprumXduPxKBUVEZNxMbVYoAz9v/kEZmaLauh8LRP2Hg==}
+  /@storybook/preview-api@7.6.13:
+    resolution: {integrity: sha512-BbRlVpxgOXSe4/hpf9cRtbvvCJoRrFbjMCnmaDh+krd8O4wLbVknKhqgSR46qLyW/VGud9Rb3upakz7tNP+mtg==}
     dependencies:
-      '@storybook/channels': 7.6.12
-      '@storybook/client-logger': 7.6.12
-      '@storybook/core-events': 7.6.12
+      '@storybook/channels': 7.6.13
+      '@storybook/client-logger': 7.6.13
+      '@storybook/core-events': 7.6.13
       '@storybook/csf': 0.1.2
       '@storybook/global': 5.0.0
-      '@storybook/types': 7.6.12
+      '@storybook/types': 7.6.13
       '@types/qs': 6.9.11
       dequal: 2.0.3
       lodash: 4.17.21
@@ -4591,14 +4594,22 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
-  /@storybook/types@7.6.12:
-    resolution: {integrity: sha512-Wsbd+NS10/2yMHQ/26rXHflXam0hm2qufTFiHOX6VXZWxij3slRU88Fnwzp+1QSyjXb0qkEr8dOx7aG00+ItVw==}
+  /@storybook/types@7.6.13:
+    resolution: {integrity: sha512-N8HfqhL5uaI69BZx+xLkKi1YIgDp34XeL3uhxii4NfThcY1KJA643Gqk3oLKefiBqBpIRGKN0nA41Fhdvhr7Hw==}
     dependencies:
-      '@storybook/channels': 7.6.12
+      '@storybook/channels': 7.6.13
       '@types/babel__core': 7.20.5
       '@types/express': 4.17.21
       file-system-cache: 2.3.0
     dev: true
+
+  /@tailwindcss/line-clamp@0.4.4(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-5U6SY5z8N42VtrCrKlsTAA35gy2VSyYtHWCsg1H87NU1SXnEfekTVlrga9fzUDrrHcGi2Lb5KenUWb4lRQT5/g==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.4.1
+    dev: false
 
   /@testing-library/dom@9.3.4:
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
