@@ -17,7 +17,7 @@ export const Textarea: FC<TextareaProps> = ({
       className="min-h-fit px-4 py-2 text-base bg-primary text-white overflow-hidden"
       placeholder={placeholder}
       value={value}
-      rows={1}
+      rows={2}
       onChange={onChange}
     />
   );
