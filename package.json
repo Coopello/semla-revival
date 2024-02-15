@@ -5,11 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "deploy": "wrangler publish --minify server.ts",
     "dev": "remix dev --manual",
-    "dev:remix": "remix watch",
-    "workers": "wrangler dev server.workers.ts",
-    "dev:workers": "concurrently \"npm:build\" \"npm:dev:remix\" \"npm:workers\"",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
@@ -17,11 +13,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@hono/node-server": "^1.4.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
-    "@remix-run/cloudflare": "^2.5.0",
-    "@remix-run/cloudflare-workers": "^2.5.0",
     "@remix-run/css-bundle": "^2.5.0",
     "@remix-run/node": "^2.5.0",
     "@remix-run/react": "^2.5.0",
@@ -29,7 +22,6 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "hono": "^3.12.5",
     "isbot": "^4.1.0",
     "lucide-react": "^0.309.0",
     "react": "^18.2.0",
@@ -39,7 +31,6 @@
     "vaul": "^0.8.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231218.0",
     "@remix-run/dev": "^2.5.0",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
@@ -54,7 +45,6 @@
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "autoprefixer": "^10.4.17",
-    "concurrently": "^8.2.2",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -68,8 +58,7 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.1.6",
     "vite": "^5.0.12",
-    "vite-tsconfig-paths": "^4.3.1",
-    "wrangler": "^3.22.4"
+    "vite-tsconfig-paths": "^4.3.1"
   },
   "engines": {
     "node": ">=18.0.0"
