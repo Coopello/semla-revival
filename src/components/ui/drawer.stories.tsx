@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Drawer } from "./drawer";
+import { Button } from "src/components/ui/button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -20,6 +21,7 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
+    trigger: <Button variant="outline">Open Drawer</Button>,
     main: <div>ほげだろう</div>,
     footer: <div>ほげだろう</div>,
   },

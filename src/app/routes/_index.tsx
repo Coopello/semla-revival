@@ -26,7 +26,14 @@ export default function Index() {
       <Button onClick={() => setIsOpen(!isOpen)}>
         これはドロワーを召喚するでぢ。
       </Button>
-      <Drawer footer={<ChatForm value="ofjagope" onChange={() => {}} />} />
+      <Drawer
+        trigger={
+          <Button variant="outline" color="primary">
+            Open Drawer
+          </Button>
+        }
+        footer={<ChatForm value="ofjagope" onChange={() => {}} />}
+      />
     </div>
   );
 }
