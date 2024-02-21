@@ -1,30 +1,27 @@
-import { FC, ReactNode, SetStateAction } from "react";
+import { FC, ReactNode } from "react";
+import { Button } from "../ui/shadcn/button";
 import {
+  Drawer as ShadcnDrawer,
   DrawerContent,
   DrawerFooter,
-  DrawerPortal,
   DrawerTrigger,
-  Drawer as ShadcnDrawer,
-} from "./shadcn/drawer";
-import { Button } from "src/components/ui/button";
+} from "../ui/shadcn/drawer";
 
 type Props = {
-  isOpen: boolean;
-  footer: ReactNode;
-  onOpenChange: (value: SetStateAction<boolean>) => void;
+  main?: ReactNode;
+  footer?: ReactNode;
 };
 
-export const Drawer: FC<Props> = ({ isOpen, onOpenChange, footer }) => {
+export const Drawer: FC<Props> = ({ main, footer }) => {
   return (
-    <ShadcnDrawer open={isOpen} onOpenChange={onOpenChange} modal={false}>
+    <ShadcnDrawer>
       <DrawerTrigger asChild>
-        <Button>これはボタンでぢ。</Button>
+        <Button variant="outline">Open Drawer</Button>
       </DrawerTrigger>
-      <DrawerPortal>
-        <DrawerContent className="bg-primary">
-          <DrawerFooter>{footer}</DrawerFooter>
-        </DrawerContent>
-      </DrawerPortal>
+      <DrawerContent className="h-[calc(100vh_-_80px)] flex flex-col justify-between w-full">
+        {main}
+        {footer && <DrawerFooter>{footer}</DrawerFooter>}
+      </DrawerContent>
     </ShadcnDrawer>
   );
 };
