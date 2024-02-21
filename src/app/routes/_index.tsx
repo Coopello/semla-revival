@@ -2,7 +2,6 @@ import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
 import { ChatForm } from "src/components/domain/chat/chatForm";
 import { Drawer } from "src/components/ui/drawer";
-import { DrawerDemo } from "src/components/ui/drawerDemo";
 import { Message } from "src/components/ui/message";
 import { Button } from "src/components/ui/shadcn/button";
 
@@ -28,7 +27,6 @@ export default function Index() {
         これはドロワーを召喚するでぢ。
       </Button>
       <Drawer footer={<ChatForm value="ofjagope" onChange={() => {}} />} />
-      <DrawerDemo />
     </div>
   );
 }

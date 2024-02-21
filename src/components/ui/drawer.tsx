@@ -18,8 +18,8 @@ export const Drawer: FC<Props> = ({ main, footer }) => {
       <DrawerTrigger asChild>
         <Button variant="outline">Open Drawer</Button>
       </DrawerTrigger>
-      <DrawerContent className="h-[calc(100vh_-_80px)] flex flex-col justify-between w-full">
-        {main}
+      <DrawerContent className="h-[calc(100vh_-_80px)] flex flex-col justify-between w-full bg-primary">
+        <div className="mx-4">{main}</div>
         {footer && <DrawerFooter>{footer}</DrawerFooter>}
       </DrawerContent>
     </ShadcnDrawer>
