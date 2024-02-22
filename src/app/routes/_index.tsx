@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { ChatForm } from "src/components/domain/chat/chatForm";
 import { WorkEditPageHeader } from "src/components/layout/workEditPageHeader";
 import { WorkListPageHeader } from "src/components/layout/workListPageHeader";
+import { Drawer } from "src/components/ui/drawer";
 import { Message } from "src/components/ui/message";
 import { Button } from "src/components/ui/shadcn/button";
 
@@ -43,10 +44,22 @@ export default function Index() {
           </a>
         </li>
       </ul>
-      <Button>これはボタンでぢ。</Button>
-      <Button>これもボタンでぢ。</Button>
-      <Message message="これはメッセージでぢ。" type="bot" />
-      <ChatForm value="これはチャットフォームでぢ。" onChange={() => {}} />
+      <div
+        className="min-h-svh"
+        style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}
+      >
+        <Button>これはボタンでぢ。</Button>
+        <Button>これもボタンでぢ。</Button>
+        <Message message="これはメッセージでぢ。" type="bot" />
+        <Drawer
+          trigger={
+            <Button variant="outline" color="primary">
+              Open Drawer
+            </Button>
+          }
+          footer={<ChatForm value="ofjagope" onChange={() => {}} />}
+        />
+      </div>
     </div>
   );
 }
