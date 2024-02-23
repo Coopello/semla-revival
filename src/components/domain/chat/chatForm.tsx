@@ -10,7 +10,7 @@ type FormProps = {
 
 export const ChatForm: FC<FormProps> = ({ value, onChange }) => {
   return (
-    <Form className="flex gap-4 px-4 py-3 bg-primary">
+    <Form className="flex items-center gap-4 px-4 py-3 bg-primary">
       <Textarea
         placeholder="AI にそうだんする"
         value={value}
