@@ -4,6 +4,7 @@ import { ChatIcon } from "./chat";
 import { BookIcon } from "./book";
 import { CloseIcon } from "./close";
 import { SendIcon } from "./send";
+import { ChevronLeftIcon } from "src/components/icons/chevronLeft";
 
 const Icons = {
   plus: <PlusIcon />,
@@ -11,6 +12,7 @@ const Icons = {
   chat: <ChatIcon />,
   close: <CloseIcon />,
   send: <SendIcon />,
+  chevronLeft: <ChevronLeftIcon />,
 } as const;
 
 export type IconType = keyof typeof Icons;
